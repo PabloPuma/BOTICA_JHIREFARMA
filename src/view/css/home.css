@@ -1,0 +1,354 @@
+/* ===============================
+   JHIREFARMA - ESTILOS PRINCIPALES
+   Archivo: src/view/css/home.css
+   =============================== */
+
+/* VARIABLES DE COLOR Y FUENTE */
+:root {
+    --verde-lima: #a5e22f;
+    --verde-carrito: #3ad17d;
+    --morado: #7c3aed;
+    --azul-hero: #001f54;
+    --azul-boton: #2563eb;
+    --gris-placeholder: #e5e7eb;
+    --texto: #1f2937;
+    --fondo: #f9fafb;
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+  
+  /* RESETEO GENERAL */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.5;
+  }
+  
+  /* ===============================
+     HEADER
+     =============================== */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--morado);
+  }
+  
+  /* Buscador */
+  .buscador {
+    display: flex;
+    align-items: center;
+    flex: 1 1 300px;
+    max-width: 500px;
+    background: #f3f4f6;
+    border-radius: 50px;
+    padding: 6px 14px;
+  }
+  
+  .buscador input {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    font-size: 0.95rem;
+    padding: 6px;
+  }
+  
+  .buscador .btn-buscar {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--morado);
+    font-size: 1.2rem;
+  }
+  
+  /* Botones del header */
+  .acciones {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  
+  .btn-usuario {
+    background: transparent;
+    border: 2px solid var(--morado);
+    color: var(--morado);
+    padding: 6px 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .btn-usuario:hover {
+    background: var(--morado);
+    color: white;
+  }
+  
+  .carrito {
+    position: relative;
+    background: var(--verde-carrito);
+    color: white;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .carrito:hover {
+    transform: scale(1.05);
+  }
+  
+  .carrito .contador {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: white;
+    color: var(--verde-carrito);
+    font-size: 0.7rem;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+  
+  /* ===============================
+     NAVEGACIÓN
+     =============================== */
+  nav {
+    background: var(--verde-lima);
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  
+  nav li a {
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 14px 20px;
+    display: block;
+    transition: background 0.3s;
+  }
+  
+  nav li a:hover {
+    background: rgba(0, 0, 0, 0.08);
+  }
+  
+  /* ===============================
+     HERO - CARRUSEL
+     =============================== */
+  .hero {
+    background: var(--azul-hero);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+  }
+  
+  .slide {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px;
+  }
+  
+  .slide-imagen img {
+    width: 260px;
+    height: 180px;
+    background: #334155;
+    border-radius: 12px;
+  }
+  
+  .slide-texto p {
+    font-size: 1.3rem;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Flechas */
+  .flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    padding: 6px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+  
+  .flecha:hover {
+    background: rgba(255,255,255,0.4);
+  }
+  
+  .flecha.prev { left: 16px; }
+  .flecha.next { right: 16px; }
+  
+  /* Dots */
+  .indicadores {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+  }
+  
+  .dot.activo {
+    background: white;
+  }
+  
+  /* ===============================
+     PRODUCTOS
+     =============================== */
+  .productos {
+    padding: 40px 24px;
+    text-align: center;
+  }
+  
+  .productos h2 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+  
+  .grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+    justify-items: center;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    padding: 14px;
+    width: 100%;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .imagen-producto img {
+    width: 100%;
+    height: 130px;
+    background: var(--gris-placeholder);
+    border-radius: 8px;
+  }
+  
+  .tag {
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .nombre {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .precio {
+    color: var(--azul-boton);
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .btn-agregar {
+    background: var(--azul-boton);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  
+  .btn-agregar:hover {
+    background: #1d4ed8;
+  }
+  
+  /* ===============================
+     RESPONSIVE
+     =============================== */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+    }
+  
+    .buscador {
+      order: 2;
+    }
+  
+    .slide {
+      flex-direction: column;
+    }
+  
+    .slide-texto p {
+      font-size: 1.1rem;
+    }
+  }
+  
