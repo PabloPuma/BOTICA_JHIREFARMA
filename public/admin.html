@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="../src/view/css/admin.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrador - Jhirefarma</title>
+  <link rel="stylesheet" href="../src/view/css/admin.css">
+  <script defer src="../src/view/js/admin.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide-icons"></script>
+</head>
+<body>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="logo">Jhirefarma<span>Desktop</span></div>
+    <nav>
+      <ul>
+        <li><i data-lucide="home"></i><span>Inicio</span></li>
+        <li><i data-lucide="dollar-sign"></i><span>Ventas</span></li>
+        <li class="activo"><i data-lucide="file-text"></i><span>Inventario</span></li>
+        <li><i data-lucide="bar-chart-2"></i><span>Reportes</span></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="main-content">
+    <!-- HEADER -->
+    <header class="main-header">
+      <h1>Control de Inventario</h1>
+      <div class="usuario">
+        <img src="https://i.pravatar.cc/40" alt="Usuario">
+      </div>
+    </header>
+
+    <!-- TARJETAS RESUMEN -->
+    <section class="resumen">
+      <div class="card total">
+        <h3>Total Productos</h3>
+        <p>1,562 <span>productos únicos</span></p>
+      </div>
+      <div class="card stock">
+        <h3>Stock Disponible</h3>
+        <p>8,500 <span>unidades listas</span></p>
+      </div>
+      <div class="card bajo-stock">
+        <h3>Productos Bajo Stock</h3>
+        <p>12 <span>necesita reabastecimiento</span></p>
+      </div>
+      <div class="card valor">
+        <h3>Valor Total</h3>
+        <p>S/ 1,556.00 <span>últimos 7 días</span></p>
+      </div>
+    </section>
+
+    <!-- TABLA PRODUCTOS -->
+    <section class="tabla-productos">
+      <div class="tabla-header">
+        <div class="buscador">
+          <input type="text" placeholder="Buscar producto...">
+        </div>
+        <div class="acciones">
+          <button class="btn-verde">Añadir Producto</button>
+          <button class="btn-blanco">Actualización masiva</button>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Stock actual</th>
+            <th>Precio</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>Paracetamol 500mg</td>
+            <td>250</td>
+            <td>S/ 2.50</td>
+            <td><span class="badge en-stock">En stock</span></td>
+            <td><button class="btn-azul">Actualizar</button></td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Ibuprofeno 400mg</td>
+            <td>60</td>
+            <td>S/ 3.20</td>
+            <td><span class="badge en-stock">En stock</span></td>
+            <td><button class="btn-azul">Actualizar</button></td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>Omeprazol 20mg</td>
+            <td>8</td>
+            <td>S/ 4.10</td>
+            <td><span class="badge bajo">Bajo stock</span></td>
+            <td><button class="btn-azul">Actualizar</button></td>
+          </tr>
+          <tr>
+            <td>004</td>
+            <td>Loratadina 10mg</td>
+            <td>110</td>
+            <td>S/ 3.00</td>
+            <td><span class="badge en-stock">En stock</span></td>
+            <td><button class="btn-azul">Actualizar</button></td>
+          </tr>
+          <tr>
+            <td>005</td>
+            <td>Amoxicilina 250mg</td>
+            <td>5</td>
+            <td>S/ 5.80</td>
+            <td><span class="badge bajo">Bajo stock</span></td>
+            <td><button class="btn-azul">Actualizar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+<script src="../src/view/js/admin.js"></script>
+
+</body>
+</html>
