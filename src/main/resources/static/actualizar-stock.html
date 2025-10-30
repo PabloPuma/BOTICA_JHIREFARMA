@@ -6,33 +6,35 @@
   <title>Actualizar Stock | JhireFarmaDesktop</title>
   <link rel="stylesheet" href="css/actualizar-stock.css">
   <script defer src="js/actualizar-stock.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide-icons"></script>
 </head>
 <body>
-  <div class="container">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="logo">
-        <h2>Jhirefarma<span class="highlight">*</span>Desktop</h2>
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="logo">Jhirefarma<span>Desktop</span></div>
+    <nav>
+      <ul>
+        <li><i data-lucide=""></i><span>Ventas</span></li>
+        <li class="activo"><i data-lucide=""></i><span>Inventario</span></li>
+        <li><i data-lucide=""></i><span>Reportes</span></li>
+        <li><i data-lucide=""></i><span>Configuracion</span></li>
+      </ul>
+    </nav>
+  </aside>
+
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="main-content">
+    <!-- HEADER -->
+    <header class="main-header">
+      <h1>Actualizar Stock de un Producto</h1>
+      <div class="usuario">
+        <img src="https://i.pravatar.cc/40" alt="Usuario">
       </div>
-      <nav>
-        <ul>
-          <li><a href="inicio.html"><i>🏠</i>Inicio</a></li>
-          <li><a href="ventas.html"><i>💲</i>Ventas</a></li>
-          <li><a href="inventario.html" class="active"><i>📦</i>Inventario</a></li>
-          <li><a href="reportes.html"><i>📊</i>Reportes</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="main-content">
-      <header class="header">
-        <h1>Actualizar Stock de un Producto</h1>
-        <div class="user-avatar">
-          <img src="../src/view/img/avatar.png" alt="Usuario">
-        </div>
-      </header>
-
+    </header>
+<main class="contenedor-stock">
       <!-- FORMULARIO -->
       <section class="form-section">
         <form id="actualizarStockForm">
@@ -65,8 +67,10 @@
         </div>
       </section>
     </main>
-  </div>
-
+</main>
   <script src="../src/view/js/actualizar-stock.js"></script>
+      <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

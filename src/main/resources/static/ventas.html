@@ -9,25 +9,28 @@
     <script defer src="js/ventas.js"></script>
 </head>
 <body>
-    <div class="container">
-        <!-- SIDEBAR -->
-        <aside class="sidebar">
-            <h2 class="logo">JhireFarmaDesktop*</h2>
-            <ul class="menu">
-                <li class="active"><a href="#"><i class="icon">🛒</i> Gestión de Ventas</a></li>
-                <li><a href="#"><i class="icon">📦</i> Control de Inventario</a></li>
-                <li><a href="#"><i class="icon">👥</i> Gestión de Clientes</a></li>
-                <li><a href="#"><i class="icon">📊</i> Reportes</a></li>
-            </ul>
-        </aside>
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="logo">Jhirefarma<span>Desktop</span></div>
+    <nav>
+      <ul>
+        <li class="activo"><i data-lucide=""></i><span>Ventas</span> <link rel="stylesheet" href="ventas.html"></li>
+        <li><i data-lucide=""></i><span>Inventario</span></li>
+        <li ><i data-lucide=""></i><span>Reportes</span></li>
+        <li ><i data-lucide=""></i><span>Configuracion</span></li>
+      </ul>
+    </nav>
+  </aside>
 
-        <!-- MAIN -->
-        <main class="main-content">
-            <!-- HEADER -->
-            <header class="main-header">
-                <h1>Gestión de Ventas</h1>
-                <div class="user-avatar">👤</div>
-            </header>
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="main-content">
+    <!-- HEADER -->
+    <header class="main-header">
+      <h1>Gestion de ventas</h1>
+      <div class="usuario">
+        <img src="https://i.pravatar.cc/40" alt="Usuario">
+      </div>
+    </header>
 
             <div class="venta-container">
                 <!-- PUNTO DE VENTA -->
@@ -148,6 +151,8 @@
                 </table>
             </section>
         </main>
-    </div>
+          <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

@@ -1,5 +1,21 @@
-// === GRÁFICOS DE REPORTES ===
 
+   document.addEventListener("DOMContentLoaded", () => {
+
+    const itemsMenu = document.querySelectorAll(".sidebar nav li");
+  
+
+    // ==== Menú activo ====
+    itemsMenu.forEach((item) => {
+      item.addEventListener("click", () => {
+        itemsMenu.forEach((i) => i.classList.remove("activo"));
+        item.classList.add("activo");
+      });
+    });
+  
+
+  });
+  // === GRÁFICOS DE REPORTES ===
+  
 // Ventas por Mes
 const ctxMes = document.getElementById("chartVentasMes").getContext("2d");
 new Chart(ctxMes, {
@@ -23,6 +39,13 @@ new Chart(ctxMes, {
     plugins: { legend: { display: false } }
   }
 });
+    // ==== Menú activo ====
+    itemsMenu.forEach((item) => {
+      item.addEventListener("click", () => {
+        itemsMenu.forEach((i) => i.classList.remove("activo"));
+        item.classList.add("activo");
+      });
+    });
 
 // Ventas Diarias
 const ctxDia = document.getElementById("chartVentasDiarias").getContext("2d");
@@ -50,6 +73,9 @@ new Chart(ctxDia, {
   }
 });
 
+
+  
+
 // === FUNCIONALIDAD BOTONES ===
 document.querySelector(".btn-generar").addEventListener("click", () => {
   alert("Generando reporte...");
@@ -58,3 +84,4 @@ document.querySelector(".btn-generar").addEventListener("click", () => {
 document.querySelector(".btn-exportar").addEventListener("click", () => {
   alert("Exportando datos...");
 });
+

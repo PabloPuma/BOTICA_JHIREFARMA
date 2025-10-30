@@ -8,30 +8,29 @@
   <script defer src="js/add-product.js"></script>
 </head>
 <body>
-  <div class="container">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="logo">
-        <h2>Jhirefarma<span class="highlight">*</span>Desktop</h2>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="inicio.html"><i class="icon">🏠</i>Inicio</a></li>
-          <li><a href="ventas.html"><i class="icon">💲</i>Ventas</a></li>
-          <li><a href="inventario.html" class="active"><i class="icon">📄</i>Inventario</a></li>
-          <li><a href="reportes.html"><i class="icon">📊</i>Reportes</a></li>
-        </ul>
-      </nav>
-    </aside>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="main-content">
-      <header class="header">
-        <h1>Añadir Producto</h1>
-        <div class="user-avatar">
-          <img src="../src/view/img/avatar.png" alt="Usuario">
-        </div>
-      </header>
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="logo">Jhirefarma<span>Desktop</span></div>
+    <nav>
+      <ul>
+        <li><i data-lucide=""></i><span>Ventas</span></li>
+        <li class="activo"><i data-lucide=""></i><span>Inventario</span></li>
+        <li ><i data-lucide=""></i><span>Reportes</span></li>
+        <li><i data-lucide=""></i><span>Configuracion</span></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="main-content">
+    <!-- HEADER -->
+    <header class="main-header">
+      <h1>Añadir Producto</h1>
+      <div class="usuario">
+        <img src="https://i.pravatar.cc/40" alt="Usuario">
+      </div>
+    </header>
 
       <section class="form-section">
         <form id="productForm">
@@ -57,8 +56,10 @@
         </form>
       </section>
     </main>
-  </div>
 
   <script src="../src/view/js/add-product.js"></script>
+      <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

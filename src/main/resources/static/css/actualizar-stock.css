@@ -1,81 +1,116 @@
-body {
-  font-family: "Segoe UI", sans-serif;
-  margin: 0;
-  background-color: #f5f5f5;
-  color: #333;
-}
+/* =====================================
+   JHIREFARMA - PANEL ADMINISTRADOR
+   Archivo: src/view/css/admin.css
+   ===================================== */
 
-.container {
-  display: flex;
-  height: 100vh;
-}
-
-/* ===== Sidebar ===== */
-.sidebar {
-  width: 240px;
-  background: #fff;
-  border-right: 1px solid #ddd;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.logo {
-  font-weight: bold;
-  color: #2e7d32;
-  margin-bottom: 40px;
-}
-
-.logo .highlight {
-  color: #43a047;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin: 18px 0;
-}
-
-.sidebar ul li a {
-  text-decoration: none;
-  color: #555;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 15px;
-  transition: color 0.3s;
-}
-
-.sidebar ul li a.active,
-.sidebar ul li a:hover {
-  color: #2e7d32;
-  font-weight: 600;
-}
-
-/* ===== Header ===== */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #ffffff;
-  padding: 20px 30px;
-  border-bottom: 1px solid #ddd;
-}
-
-.header h1 {
-  color: #2e7d32;
-  font-size: 22px;
-}
-
-.user-avatar img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
+   :root {
+    --verde: #10b981;
+    --verde-claro: #d1fae5;
+    --rojo: #ef4444;
+    --gris: #f3f4f6;
+    --azul: #2563eb;
+    --texto: #1f2937;
+    --fondo: #f9fafb;
+    --borde: #e5e7eb;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    min-height: 100vh;
+    background: var(--fondo);
+    color: var(--texto);
+  }
+  
+  /* ==========================
+     SIDEBAR
+     ========================== */
+  .sidebar {
+    width: 280px;
+    background: white;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--azul);
+    margin-bottom: 40px;
+  }
+  
+  .logo span {
+    color: var(--verde);
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    width: 100%;
+  }
+  
+  .sidebar nav li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 60px;
+    color: #374151;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .sidebar nav li:hover {
+    background: var(--gris);
+  }
+  
+  .sidebar nav li.activo {
+    background: var(--verde-claro);
+    border-left: 25px solid var(--verde);
+    color: var(--verde);
+  }
+  
+  .sidebar nav li i {
+    width: 20px;
+  }
+  
+  /* ==========================
+     MAIN CONTENT
+     ========================== */
+  .main-content {
+    flex: 1;
+    padding: 20px 30px;
+  }
+  
+  /* ==========================
+     HEADER
+     ========================== */
+  .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  .main-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .usuario img {
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    border: 2px solid var(--azul);
+  }
 /* ===== Formulario ===== */
 .form-section {
   display: flex;
@@ -150,7 +185,7 @@ input:focus {
 
 /* ===== Alerta Bajo Stock ===== */
 .alert-section {
-  padding: 30px;
+  padding: 25px;
 }
 
 .alert-card {
@@ -171,7 +206,7 @@ input:focus {
 }
 
 .alert-card li {
-  margin: 10px 0;
+  margin: 0px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -195,3 +230,115 @@ input:focus {
 .btn-alerta:hover {
   background: #c62828;
 }
+
+/* Contenedor principal: organiza las dos secciones */
+.contenedor-stock {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 30px;
+  min-height: 80vh;
+}
+
+/* FORMULARIO más angosto, a la izquierda */
+.form-section {
+  flex: 0 0 30%;
+  padding: 20px;
+
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-section input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1.5px solid #4CAF50; /* verde */
+  outline: none;
+}
+
+.btn-actualizar {
+  background-color: #4CAF50;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-actualizar:hover {
+  background-color: #45a049;
+}
+
+/* ALERTA amplia, a la derecha */
+.alert-section {
+  flex: 0 0 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert-card {
+  width: 100%;
+  background-color: #fff5f5;
+  border: 2px solid #e74c3c;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.alert-card h2 {
+  color: #c0392b;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.alert-card p {
+  margin-bottom: 10px;
+}
+
+.alert-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.alert-card li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-alerta {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-alerta:hover {
+  background-color: #c0392b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contenedor-stock {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-section,
+  .alert-section {
+    flex: 0 0 90%;
+  }
+}
+

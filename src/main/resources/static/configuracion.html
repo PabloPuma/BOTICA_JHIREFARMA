@@ -8,30 +8,28 @@
   <script defer src="js/configuracion.js"></script>
 </head>
 <body>
-  <div class="dashboard">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="logo">
-        <h2>JhireFarma<span class="highlight">*</span></h2>
-      </div>
-      <nav class="menu">
-        <a href="#"><i class="fas fa-home"></i> Inicio</a>
-        <a href="#"><i class="fas fa-shopping-cart"></i> Gestión de Ventas</a>
-        <a href="#"><i class="fas fa-box"></i> Control de Inventario</a>
-        <a href="#"><i class="fas fa-users"></i> Gestión de Clientes</a>
-        <a href="#"><i class="fas fa-chart-line"></i> Reportes</a>
-        <a href="#" class="active"><i class="fas fa-cog"></i> Configuración</a>
-      </nav>
-    </aside>
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="logo">Jhirefarma<span>Desktop</span></div>
+    <nav>
+      <ul>
+        <li><i data-lucide=""></i><span>Ventas</span></li>
+        <li><i data-lucide=""></i><span>Inventario</span></li>
+        <li><i data-lucide=""></i><span>Reportes</span></li>
+        <li class="activo"><i data-lucide=""></i><span>Configuracion</span></li>
+      </ul>
+    </nav>
+  </aside>
 
-    <!-- MAIN -->
-    <main class="main-content">
-      <header class="header">
-        <h1>Configuración del Sistema</h1>
-        <div class="user-avatar">
-          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Usuario">
-        </div>
-      </header>
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="main-content">
+    <!-- HEADER -->
+    <header class="main-header">
+      <h1>Configuración del Sistema</h1>
+      <div class="usuario">
+        <img src="https://i.pravatar.cc/40" alt="Usuario">
+      </div>
+    </header>
 
       <!-- SECCIÓN DE PERFIL -->
       <section class="config-section perfil">
@@ -106,8 +104,10 @@
         <p><em>Vista de administrador - Configuración</em></p>
       </footer>
     </main>
-  </div>
 
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

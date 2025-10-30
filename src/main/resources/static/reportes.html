@@ -10,35 +10,28 @@
 
 </head>
 <body>
-  <div class="container">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="logo">JhirefarmaDesktop</div>
-      <nav class="menu">
-        <a href="admin.html" class="menu-item">
-          <i class="fas fa-home"></i> Inicio
-        </a>
-        <a href="#" class="menu-item">
-          <i class="fas fa-dollar-sign"></i> Ventas
-        </a>
-        <a href="#" class="menu-item">
-          <i class="fas fa-box"></i> Inventario
-        </a>
-        <a href="reportes.html" class="menu-item active">
-          <i class="fas fa-chart-line"></i> Reportes
-        </a>
-      </nav>
-    </aside>
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="logo">Jhirefarma<span>Desktop</span></div>
+    <nav>
+      <ul>
+        <li><i data-lucide=""></i><span>Ventas</span></li>
+        <li><i data-lucide=""></i><span>Inventario</span></li>
+        <li class="activo"><i data-lucide=""></i><span>Reportes</span></li>
+        <li><i data-lucide=""></i><span>Configuracion</span></li>
+      </ul>
+    </nav>
+  </aside>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="main-content">
-      <!-- HEADER -->
-      <header class="header">
-        <h1>Reportes en Tiempo Real</h1>
-        <div class="user-avatar">
-          <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Usuario" />
-        </div>
-      </header>
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="main-content">
+    <!-- HEADER -->
+    <header class="main-header">
+      <h1>Reportes en Tiempo Real</h1>
+      <div class="usuario">
+        <img src="https://i.pravatar.cc/40" alt="Usuario">
+      </div>
+    </header>
 
       <!-- FILTROS DE REPORTE -->
       <section class="filters">
@@ -95,9 +88,11 @@
         <em>Vista de administrador, Reporte</em>
       </footer>
     </main>
-  </div>
 
   <script src="../../src/view/js/reportes.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
