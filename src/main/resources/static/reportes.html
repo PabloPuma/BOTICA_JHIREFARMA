@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JhireFarma | Reportes</title>
+
+  <link rel="stylesheet" href="css/reportes.css" />
+  <script defer src="js/reportes.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo">JhirefarmaDesktop</div>
+      <nav class="menu">
+        <a href="admin.html" class="menu-item">
+          <i class="fas fa-home"></i> Inicio
+        </a>
+        <a href="#" class="menu-item">
+          <i class="fas fa-dollar-sign"></i> Ventas
+        </a>
+        <a href="#" class="menu-item">
+          <i class="fas fa-box"></i> Inventario
+        </a>
+        <a href="reportes.html" class="menu-item active">
+          <i class="fas fa-chart-line"></i> Reportes
+        </a>
+      </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+      <!-- HEADER -->
+      <header class="header">
+        <h1>Reportes en Tiempo Real</h1>
+        <div class="user-avatar">
+          <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Usuario" />
+        </div>
+      </header>
+
+      <!-- FILTROS DE REPORTE -->
+      <section class="filters">
+        <select id="tipo-reporte">
+          <option>Seleccionar tipo de reporte</option>
+          <option>Ventas</option>
+          <option>Inventario</option>
+          <option>Clientes</option>
+        </select>
+
+        <input type="date" id="fecha-inicio" />
+        <input type="date" id="fecha-fin" />
+
+        <button class="btn-generar">Generar Reporte</button>
+        <button class="btn-exportar">Exportar Datos</button>
+      </section>
+
+      <!-- INDICADORES CLAVE -->
+      <section class="kpi-container">
+        <div class="kpi-card">
+          <h3>Ventas Totales</h3>
+          <p class="kpi-value">S/12,030.00</p>
+        </div>
+        <div class="kpi-card">
+          <h3>Productos en Stock</h3>
+          <p class="kpi-value">1,500</p>
+        </div>
+        <div class="kpi-card">
+          <h3>Clientes Activos</h3>
+          <p class="kpi-value">300</p>
+        </div>
+        <div class="kpi-card">
+          <h3>Ventas Promedio</h3>
+          <p class="kpi-value">S/1,556.00</p>
+        </div>
+      </section>
+
+      <!-- GRÁFICOS -->
+      <section class="charts">
+        <div class="chart-card">
+          <h3>Ventas por Mes</h3>
+          <p class="chart-info">S/956.00 (Este año +15%)</p>
+          <canvas id="chartVentasMes"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Ventas Diarias (Últimos 7 Días)</h3>
+          <p class="chart-info">S/233.00 (Últimos 7 días +5%)</p>
+          <canvas id="chartVentasDiarias"></canvas>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <em>Vista de administrador, Reporte</em>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../../src/view/js/reportes.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
