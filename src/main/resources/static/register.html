@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro - JhireFarma</title>
+  <link rel="stylesheet" href="css/register.css" />
+  <script defer src="js/register.js"></script>
+</head>
+<body>
+
+  <div class="register-page">
+    <div class="form-container">
+      <!-- Logo -->
+      <div class="logo-box">
+        <img src="img/logo.png" alt="JhireFarma Logo" class="logo">
+      </div>
+
+      <h1>Crear cuenta</h1>
+      <p class="subtitle">Completa tus datos para registrarte como cliente</p>
+
+      <form id="registerForm" autocomplete="off">
+
+        <div class="form-grid">
+          <!-- Nombres y apellidos -->
+          <div class="input-group">
+            <label for="nombres">Nombres</label>
+            <input type="text" id="nombres" name="nombres" required>
+          </div>
+
+          <div class="input-group">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+          </div>
+
+          <!-- DNI -->
+          <div class="input-group">
+            <label for="dni">DNI</label>
+            <input type="text" id="dni" name="dni" maxlength="8" pattern="[0-9]{8}" placeholder="8 dígitos" required>
+          </div>
+
+          <!-- Género -->
+          <div class="input-group">
+            <label for="genero">Género</label>
+            <select id="genero" name="genero" required>
+              <option value="">Seleccione</option>
+              <option>Masculino</option>
+              <option>Femenino</option>
+              <option>Otros</option>
+            </select>
+          </div>
+
+          <!-- Correo -->
+          <div class="input-group">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required>
+          </div>
+
+          <!-- Celular -->
+          <div class="input-group">
+            <label for="celular">Número de celular</label>
+            <input type="tel" id="celular" name="celular" maxlength="9" pattern="[0-9]{9}" placeholder="9 dígitos" required>
+          </div>
+
+          <!-- Dirección -->
+          <div class="input-group">
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" required>
+          </div>
+
+          <!-- Código postal -->
+          <div class="input-group">
+            <label for="codigoPostal">Código postal</label>
+            <input type="text" id="codigoPostal" name="codigoPostal" maxlength="5" pattern="[0-9]{5}" required>
+          </div>
+
+          <!-- Departamento -->
+          <div class="input-group">
+            <label for="departamento">Departamento</label>
+            <select id="departamento" name="departamento" required>
+              <option value="">Seleccione</option>
+            </select>
+          </div>
+
+          <!-- Provincia -->
+          <div class="input-group">
+            <label for="provincia">Provincia</label>
+            <select id="provincia" name="provincia" required>
+              <option value="">Seleccione</option>
+            </select>
+          </div>
+
+          <!-- Distrito -->
+          <div class="input-group">
+            <label for="distrito">Distrito</label>
+            <select id="distrito" name="distrito" required>
+              <option value="">Seleccione</option>
+            </select>
+          </div>
+
+          <!-- Usuario y contraseñas -->
+          <div class="input-group">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" required>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+
+          <div class="input-group">
+            <label for="repetir">Repetir contraseña</label>
+            <input type="password" id="repetir" name="repetir" required>
+          </div>
+        </div>
+
+        <!-- Botones -->
+        <div class="button-group">
+          <button type="button" class="btn-secondary" id="volverLogin">Volver al Login</button>
+          <button type="submit" class="btn-primary"id="verificacion">Siguiente</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

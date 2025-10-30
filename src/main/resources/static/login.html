@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - JhireFarma</title>
+  <link rel="stylesheet" href="css/login.css">
+  <script defer src="js/login.js"></script>
+</head>
+<body>
+  <div class="login-page">
+
+    <!-- Lado izquierdo -->
+    <div class="login-left">
+      <div class="overlay">
+        <div class="welcome-text">
+          <h1>¡Bienvenido a JhireFarma! 💊</h1>
+          <p>Gestiona tu botica de forma fácil, rápida y segura.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lado derecho -->
+    <div class="login-right">
+      <div class="form-box">
+        <h2>Inicia sesión</h2>
+        <p class="subtitle">
+          ¿No tienes una cuenta?
+          <a href="register.html">Crea una aquí</a>
+        </p>
+
+        <form id="loginForm">
+          <div class="input-group">
+            <label for="email">Correo</label>
+            <input type="email" id="email" placeholder="JhireFarma@login.com" required>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" placeholder="*******" required>
+          </div>
+
+          <button type="submit" class="btn-primary">Iniciar sesión</button>
+          <button type="button" id="adminLogin" class="btn-secondary">Soy Administrador</button>
+
+          <p class="forgot">
+            <a href="recuperacion.html">¿Olvidaste tu contraseña?</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

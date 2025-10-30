@@ -1,0 +1,151 @@
+/* ======== REGISTRO - JhireFarma ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background-color: #1e40af; /* Azul principal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #111;
+  }
+  
+  .register-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .form-container {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 3rem 3.5rem;
+    width: 100%;
+    max-width: 980px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.6s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .logo-box {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo {
+    width: 130px;
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  }
+  
+  h1 {
+    text-align: center;
+    color: #1e3a8a;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 2.2rem;
+  }
+  
+  /* === FORMULARIO === */
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.3rem 1.8rem;
+  }
+  
+  .input-group label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.35rem;
+    display: block;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .input-group input:focus,
+  .input-group select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+  }
+  
+  /* === BOTONES === */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    gap: 1rem;
+  }
+  
+  .btn-primary, 
+  .btn-secondary {
+    padding: 12px 28px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .btn-primary {
+    background: #2563eb;
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3);
+  }
+  
+  .btn-primary:hover {
+    background: #1e3a8a;
+    box-shadow: 0 5px 12px rgba(30, 58, 138, 0.4);
+  }
+  
+  .btn-secondary {
+    background: #e5e7eb;
+    color: #111;
+  }
+  
+  .btn-secondary:hover {
+    background: #d1d5db;
+  }
+  
+  /* === RESPONSIVO === */
+  @media (max-width: 900px) {
+    .form-container {
+      padding: 2rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 1.5rem;
+    }
+    h1 {
+      font-size: 1.7rem;
+    }
+  }
+  

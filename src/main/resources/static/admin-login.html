@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceso Administrador - JhireFarma</title>
+  <link rel="stylesheet" href="css/admin-login.css" />
+  <script defer src="js/admin-login.js"></script>
+</head>
+<body>
+
+  <div class="admin-container">
+    <div class="form-box">
+      <h1>Panel Administrativo</h1>
+      <p class="subtitle">Acceso exclusivo para administradores</p>
+
+      <form id="adminLoginForm">
+        <div class="input-group">
+          <label for="adminUser">Usuario</label>
+          <input type="text" id="adminUser" placeholder="admin123" required />
+        </div>
+
+        <div class="input-group">
+          <label for="adminPass">Contraseña</label>
+          <input type="password" id="adminPass" placeholder="********" required />
+        </div>
+
+        <button type="submit" class="btn-primary">Iniciar sesión</button>
+
+        <p class="back">
+          <a href="login.html">← Volver al login de usuario</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

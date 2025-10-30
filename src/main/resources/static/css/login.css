@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Contenedor general */
+.login-page {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Lado izquierdo */
+.login-left {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(135deg, #0077ff, #00c6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.login-left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/pattern-lines.svg") center/cover no-repeat;
+  opacity: 0.2;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.welcome-text h1 {
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+}
+
+.welcome-text p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* Lado derecho */
+.login-right {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideIn 0.7s ease-out;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 340px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease;
+}
+
+.form-box h2 {
+  color: #111827;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+.subtitle a {
+  color: #0077ff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #374151;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  transition: all 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.15);
+  outline: none;
+}
+
+.btn-primary,
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #0077ff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #005fcc;
+}
+
+.btn-secondary {
+  background-color: #e5e7eb;
+  color: #333;
+  margin-top: 10px;
+}
+
+.btn-secondary:hover {
+  background-color: #d1d5db;
+}
+
+.forgot {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.forgot a {
+  color: #0077ff;
+  text-decoration: none;
+}
+
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .login-page {
+    flex-direction: column;
+  }
+  .login-left, .login-right {
+    flex: none;
+    width: 100%;
+    height: 50vh;
+  }
+  .form-box {
+    box-shadow: none;
+  }
+}

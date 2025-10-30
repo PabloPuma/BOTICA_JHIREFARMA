@@ -1,0 +1,131 @@
+/* === Reset general === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* === Fondo principal === */
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #007BFF, #00C6FF);
+  }
+  
+  /* === Contenedor principal === */
+  .recover-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* === Caja del formulario === */
+  .form-container {
+    background: #ffffff;
+    padding: 40px 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  /* === Logo === */
+  .logo-box {
+    margin-bottom: 25px;
+  }
+  .logo {
+    width: 110px;
+    transition: transform 0.3s ease;
+  }
+  .logo:hover {
+    transform: scale(1.05);
+  }
+  
+  /* === Titulos === */
+  h1 {
+    color: #222;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 25px;
+  }
+  
+  /* === Inputs === */
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #333;
+    font-weight: 600;
+  }
+  .input-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.3s;
+  }
+  .input-group input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+    outline: none;
+  }
+  
+  /* === Botones === */
+  button.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  button.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* === Mensaje dinámico === */
+  #mensaje {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* === Enlace volver al login === */
+  .volver-login {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .volver-login a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .volver-login a:hover {
+    text-decoration: underline;
+  }
+  
+  /* === Animaciones === */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
