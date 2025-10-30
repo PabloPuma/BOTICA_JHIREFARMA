@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuración | JhireFarma</title>
+  <link rel="stylesheet" href="css/configuracion.css">
+  <script defer src="js/configuracion.js"></script>
+</head>
+<body>
+  <div class="dashboard">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>JhireFarma<span class="highlight">*</span></h2>
+      </div>
+      <nav class="menu">
+        <a href="#"><i class="fas fa-home"></i> Inicio</a>
+        <a href="#"><i class="fas fa-shopping-cart"></i> Gestión de Ventas</a>
+        <a href="#"><i class="fas fa-box"></i> Control de Inventario</a>
+        <a href="#"><i class="fas fa-users"></i> Gestión de Clientes</a>
+        <a href="#"><i class="fas fa-chart-line"></i> Reportes</a>
+        <a href="#" class="active"><i class="fas fa-cog"></i> Configuración</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+      <header class="header">
+        <h1>Configuración del Sistema</h1>
+        <div class="user-avatar">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Usuario">
+        </div>
+      </header>
+
+      <!-- SECCIÓN DE PERFIL -->
+      <section class="config-section perfil">
+        <h2><i class="fas fa-user-cog"></i> Perfil del Administrador</h2>
+        <form class="form-config">
+          <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" value="Administrador General">
+          </div>
+          <div class="form-group">
+            <label>Correo Electrónico</label>
+            <input type="email" value="admin@jhirefarma.com">
+          </div>
+          <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" placeholder="**********">
+          </div>
+          <button class="btn-guardar">Guardar Cambios</button>
+        </form>
+      </section>
+
+      <!-- SECCIÓN DE PREFERENCIAS -->
+      <section class="config-section preferencias">
+        <h2><i class="fas fa-sliders-h"></i> Preferencias Generales</h2>
+        <div class="settings-grid">
+          <div class="setting-card">
+            <h3>Modo Oscuro</h3>
+            <label class="switch">
+              <input type="checkbox" id="modoOscuro">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-card">
+            <h3>Notificaciones</h3>
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-card">
+            <h3>Actualización Automática</h3>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-card">
+            <h3>Respaldos Semanales</h3>
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN SEGURIDAD -->
+      <section class="config-section seguridad">
+        <h2><i class="fas fa-shield-alt"></i> Seguridad del Sistema</h2>
+        <ul class="security-list">
+          <li><i class="fas fa-lock"></i> Autenticación de dos factores <button>Configurar</button></li>
+          <li><i class="fas fa-user-shield"></i> Permisos de usuario <button>Administrar</button></li>
+          <li><i class="fas fa-database"></i> Copia de seguridad manual <button>Ejecutar</button></li>
+        </ul>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p><em>Vista de administrador - Configuración</em></p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

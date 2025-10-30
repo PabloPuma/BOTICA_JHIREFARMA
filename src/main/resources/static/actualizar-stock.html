@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actualizar Stock | JhireFarmaDesktop</title>
+  <link rel="stylesheet" href="css/actualizar-stock.css">
+  <script defer src="js/actualizar-stock.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>Jhirefarma<span class="highlight">*</span>Desktop</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="inicio.html"><i>🏠</i>Inicio</a></li>
+          <li><a href="ventas.html"><i>💲</i>Ventas</a></li>
+          <li><a href="inventario.html" class="active"><i>📦</i>Inventario</a></li>
+          <li><a href="reportes.html"><i>📊</i>Reportes</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+      <header class="header">
+        <h1>Actualizar Stock de un Producto</h1>
+        <div class="user-avatar">
+          <img src="../src/view/img/avatar.png" alt="Usuario">
+        </div>
+      </header>
+
+      <!-- FORMULARIO -->
+      <section class="form-section">
+        <form id="actualizarStockForm">
+          <label for="nombreProducto">Nombre del Producto</label>
+          <input type="text" id="nombreProducto" value="Paracetamol 500mg" readonly class="filled blue-text">
+
+          <label for="categoria">Categoría</label>
+          <input type="text" id="categoria" value="Analgésicos" readonly class="filled gray-bg blue-text">
+
+          <label for="stock">Stock (cantidad)</label>
+          <input type="number" id="stock" placeholder="Ingresar Stock" min="0" class="green-border" required>
+
+          <label for="precio">Precio</label>
+          <input type="number" id="precio" value="5.50" step="0.01" class="gray-border" required>
+
+          <button type="submit" class="btn-actualizar">Actualizar Producto</button>
+        </form>
+      </section>
+
+      <!-- ALERTA DE BAJO STOCK -->
+      <section class="alert-section">
+        <div class="alert-card">
+          <h2>⚠️ Alerta de Bajo Stock</h2>
+          <p>Los siguientes productos están por debajo de su umbral de stock mínimo.</p>
+          <ul>
+            <li>Paracetamol 500mg: <span class="cantidad">15 unidades</span> (Umbral: 20) <button class="btn-alerta">Actualizar Producto</button></li>
+            <li>Vitamina C 1000mg: <span class="cantidad">25 unidades</span> (Umbral: 30) <button class="btn-alerta">Actualizar Producto</button></li>
+            <li>Amoxicilina 250mg: <span class="cantidad">8 unidades</span> (Umbral: 10) <button class="btn-alerta">Actualizar Producto</button></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../src/view/js/actualizar-stock.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 240px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 40px;
+}
+
+.logo .highlight {
+  color: #43a047;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 18px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+  color: #2e7d32;
+  font-size: 22px;
+}
+
+.user-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* ===== Formulario ===== */
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+form {
+  background: #ffffff;
+  padding: 30px 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 420px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.filled {
+  background-color: #eaf3e8;
+  color: #1565c0;
+  font-weight: 600;
+}
+
+.gray-bg {
+  background-color: #f0f0f0;
+}
+
+.blue-text {
+  color: #1565c0;
+}
+
+.green-border {
+  border: 2px solid #81c784;
+}
+
+.gray-border {
+  border: 2px solid #ccc;
+}
+
+input:focus {
+  border-color: #43a047;
+}
+
+.btn-actualizar {
+  width: 100%;
+  padding: 12px;
+  background: #43a047;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-actualizar:hover {
+  background: #2e7d32;
+}
+
+/* ===== Alerta Bajo Stock ===== */
+.alert-section {
+  padding: 30px;
+}
+
+.alert-card {
+  background: #fff5f5;
+  border: 2px solid #ef5350;
+  border-radius: 10px;
+  padding: 20px 25px;
+}
+
+.alert-card h2 {
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+.alert-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.alert-card li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cantidad {
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.btn-alerta {
+  background: #ef5350;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-alerta:hover {
+  background: #c62828;
+}
