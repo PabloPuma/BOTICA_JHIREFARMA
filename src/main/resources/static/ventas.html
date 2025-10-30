@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Ventas | JhireFarma</title>
+
+    <link rel="stylesheet" href="css/ventas.css">
+    <script defer src="js/ventas.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2 class="logo">JhireFarmaDesktop*</h2>
+            <ul class="menu">
+                <li class="active"><a href="#"><i class="icon">🛒</i> Gestión de Ventas</a></li>
+                <li><a href="#"><i class="icon">📦</i> Control de Inventario</a></li>
+                <li><a href="#"><i class="icon">👥</i> Gestión de Clientes</a></li>
+                <li><a href="#"><i class="icon">📊</i> Reportes</a></li>
+            </ul>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="main-content">
+            <!-- HEADER -->
+            <header class="main-header">
+                <h1>Gestión de Ventas</h1>
+                <div class="user-avatar">👤</div>
+            </header>
+
+            <div class="venta-container">
+                <!-- PUNTO DE VENTA -->
+                <section class="productos">
+                    <div class="busqueda">
+                        <input type="text" id="buscarProducto" placeholder="Buscar producto...">
+                    </div>
+
+                    <div class="grid-productos">
+                        <div class="producto">
+                            <h3>Paracetamol 500mg</h3>
+                            <p class="categoria">Analgésicos</p>
+                            <p class="precio">💲 S/2.50</p>
+                            <p class="stock">Stock: 156</p>
+                            <div class="controles">
+                                <button class="menos">-</button>
+                                <span>1</span>
+                                <button class="mas">+</button>
+                            </div>
+                            <button class="btn-agregar">Agregar</button>
+                        </div>
+
+                        <div class="producto">
+                            <h3>Amoxicilina 250mg</h3>
+                            <p class="categoria">Antibióticos</p>
+                            <p class="precio">💲 S/8.75</p>
+                            <p class="stock">Stock: 80</p>
+                            <div class="controles">
+                                <button class="menos">-</button>
+                                <span>1</span>
+                                <button class="mas">+</button>
+                            </div>
+                            <button class="btn-agregar">Agregar</button>
+                        </div>
+
+                        <div class="producto">
+                            <h3>Ibuprofeno 400mg</h3>
+                            <p class="categoria">Antiinflamatorios</p>
+                            <p class="precio">💲 S/3.20</p>
+                            <p class="stock">Stock: 200</p>
+                            <div class="controles">
+                                <button class="menos">-</button>
+                                <span>1</span>
+                                <button class="mas">+</button>
+                            </div>
+                            <button class="btn-agregar">Agregar</button>
+                        </div>
+
+                        <div class="producto">
+                            <h3>Omeprazol 20mg</h3>
+                            <p class="categoria">Gastrointestinales</p>
+                            <p class="precio">💲 S/5.00</p>
+                            <p class="stock">Stock: 120</p>
+                            <div class="controles">
+                                <button class="menos">-</button>
+                                <span>1</span>
+                                <button class="mas">+</button>
+                            </div>
+                            <button class="btn-agregar">Agregar</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CARRITO -->
+                <aside class="carrito">
+                    <h2>🧾 Carrito <button class="limpiar">🗑️</button></h2>
+                    <div class="items-carrito">
+                        <div class="item">
+                            <span>Paracetamol 500mg</span>
+                            <span>S/2.50</span>
+                            <div class="controles">
+                                <button class="menos">-</button>
+                                <span>2</span>
+                                <button class="mas">+</button>
+                            </div>
+                            <span>Subtotal: S/5.00</span>
+                            <button class="eliminar">❌</button>
+                        </div>
+                    </div>
+                    <div class="resumen">
+                        <p>Subtotal: S/8.20</p>
+                        <p>IGV (18%): S/1.48</p>
+                        <h3>Total: S/9.68</h3>
+                        <button class="btn-confirmar">Confirmar Venta</button>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- ÚLTIMAS VENTAS -->
+            <section class="ultimas-ventas">
+                <h2>Últimas Ventas</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Venta</th>
+                            <th>Fecha</th>
+                            <th>Cliente</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>27/10/2025</td>
+                            <td>Juan Pérez</td>
+                            <td>S/15.00</td>
+                            <td><span class="badge completada">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td>#002</td>
+                            <td>27/10/2025</td>
+                            <td>María Gómez</td>
+                            <td>S/9.68</td>
+                            <td><span class="badge pendiente">Pendiente</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
